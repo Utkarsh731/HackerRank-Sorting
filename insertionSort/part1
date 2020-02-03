@@ -1,0 +1,11 @@
+n=int(input())
+element=list(map(int,input().split()))
+a=element[n-1]
+for i in range(n-2,-1,-1):
+    if(element[i]>a):
+        element[i+1]=element[i]
+        print(*element)
+        element[i]=a
+    else:
+        break
+print(*element)
